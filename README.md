@@ -1,11 +1,32 @@
 # CSS and HTML workbook
 This repository was created to reflect the main points of the theory of web development self-study.
 ## 🎀 Table of contents
+- [CSS rules](#css-rules)
 - [Flow and block model](#flow-and-block-model)
 - [Padding and margin shortcut](#padding-and-margin-shortcut)
 - [Borders](#borders)
 - [Useful links](#useful-links)
 
+## CSS rules
+Several classes should be written inside the value of one class attribute separated by a space:  
+
+<code>\<div class="first second"\>\</div\></code>
+
+For example, general properties can be specified by a rule on the <code>text</code> class, and unique properties can be specified by an individual <code>special-text</code> class.  
+
+<code>\<p class="text">Composition of the day:\</p\></code>
+
+<code>\<p class="text special-text"\>Bonobo, Rhye - Break Apart\</p\></code>
+
+.text {
+   font-size: 20px;
+}
+
+.special-text {
+     font-size: 32px;
+     color: #FEEB78;
+}
+Through a space, you can specify two, and three, and four classes. Maybe even five. Or six. Well, you get the idea.
 
 ## Flow and block model 
 Document flow (data flow) in HTML is the order in which elements are displayed on the page. In the usual form, all blocks are displayed in the order in which they are written inside the HTML document.
@@ -53,6 +74,10 @@ So, the cards fit in a line, but not close, although the indents between them we
 ### Centering elements: margin: auto
 The special value <code>auto</code> works with the centering of block elements. It automatically sets the maximum possible horizontal offset. Setting the <code>margin-left</code> and <code>margin-right</code> properties to <code>auto</code> will get the maximum padding on both sides, and the element will be centered on its parent.  
 ![element_centering.png](media/pictures/element_centering.png)   
+
+**An example using a shortcut**  
+Let's put the element in the center of the screen, giving its left anf right margins a value of <code>auto</code>. Let's do this with just one property, the margins above and below can be set to 0:  
+<code>margin: 0 auto;</code>
 
 ## Padding and margin shortcut
 
