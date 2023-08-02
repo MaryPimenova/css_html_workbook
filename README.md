@@ -48,6 +48,12 @@ Compared to <code>display: inline</code>, the major difference is that <code>dis
 Also, with <code>display: inline-block</code>, the top and bottom margins/paddings are respected, but with <code>display: inline</code> they are not.  
 Compared to <code>display: block</code>, the major difference is that <code>display: inline-block</code> does not add a line-break after the element, so the element can sit next to other elements.
 
+So, the cards fit in a line, but not close, although the indents between them were not set. You can remove the unexpected gap by assigning some class to the parent element and setting its <code>font-size: 0</code> property in the file.
+
+### Centering elements: margin: auto
+The special value <code>auto</code> works with the centering of block elements. It automatically sets the maximum possible horizontal offset. Setting the <code>margin-left</code> and <code>margin-right</code> properties to <code>auto</code> will get the maximum padding on both sides, and the element will be centered on its parent.  
+![element_centering.png](media/pictures/element_centering.png)   
+
 ## Padding and margin shortcut
 
 <b>Margin</b> is the space around the element's border outside.  
