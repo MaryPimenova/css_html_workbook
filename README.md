@@ -7,6 +7,7 @@ This repository was created to reflect the main points of the theory of web deve
 - [Padding and margin shortcut](#padding-and-margin-shortcut)
 - [Borders](#borders)
 - [Shadows](#shadows)
+- [Introduction to JS](#introduction-to-js)
 - [Useful links](#useful-links)
 
 ## CSS rules
@@ -171,6 +172,44 @@ Sometimes the shadow doesn't need to be moved, just blurring is enough. In this 
 
 A shadow can be created not only for the borders of an element, but also for text. In this case, the <code>text-shadow</code> property is used. It works in a similar way.
 
+## Introduction to JS
+#### ✔️ alert
+Using the <code>alert()</code> directive, you can display a modal window with some text on the user's screen.
+```bash
+alert("Message")
+```
+Due to the fact that the window is modal, work with the browser interface and pages will be blocked. This is inconvenient. A modal window for the user is a window that blocks his work with the browser until he closes this window.
+
+This is the fastest and easiest way to say something to the user, but such a window cannot be styled in any way, which means it is better to use it only for interface prototyping. In the final version of the web page, it is not desirable to use such modal dialogs.
+#### ✔️ console.log
+Perhaps one of the most used commands in JavaScript is <code>console.log</code>:
+```bash
+console.log('Useful information');
+```
+Using the <code>console.log</code> command, you can print information to the browser console. Only developers will be able to see this information, it will be hidden from ordinary users.
+#### ✔️ let
+The <code>let</code> directive declares a block-scoped variable with the ability to initialize it with a value.
+```bash
+let pages;
+pages = 358; 
+```
+```bash
+let pages = 358; 
+```
+```bash
+let pages = 666;
+pages = pages + 5;
+```
+#### ✔️ Math.random()
+To generate random numbers, there is the <code>Math.random()</code> command. It returns a random number between 0 and 1, including zero and not including 1. Math.random() generates a number between 0 and 0.99999999999. So Math.random() * 10 generates numbers from 0 to 9.9999999999.
+```bash
+let randomNumber = Math.random();
+console.log(randomNumber);        // for example, 0.9752705074780903 
+```
+```bash
+let randomNumber = Math.random() * 10;
+console.log(randomNumber);       // for example, 5.3575687
+```
 ## Useful links
 | **DESCRIPTION** | **LINK** |
 |:---------:|:---------:|
