@@ -1,5 +1,6 @@
 # CSS and HTML workbook
 This repository was created to reflect the main points of the theory of web development self-study.
+> HTML and CSS are not programming languages! HTML - Hypertext Markup Language (язык гипертекстовой разметки). CSS - Cascading Style Sheets (каскадные таблицы стилей).
 ## 🎀 Table of contents
 - [CSS rules](#css-rules)
 - [Flow and block model](#flow-and-block-model)
