@@ -27,7 +27,6 @@ For example, general properties can be specified by a rule on the <code>text</co
 .text {
    font-size: 20px;
 }
-
 .special-text {
      font-size: 32px;
      color: #FEEB78;
@@ -87,6 +86,14 @@ Let's put the element in the center of the screen, giving its left anf right mar
 ```bash
 margin: 0 auto;
 ```
+
+### Centering elements: display: flex
+Let's look at a way to automatically center an element. For the <code>display</code> property, in addition to <code>block</code>, <code>inline</code>, and <code>inline-block</code>, there is a special <code>flex</code> value:
+```bash
+display:flex;
+```
+![display_flex_property.png](media/pictures/display_flex_property.png)   
+An element with this property becomes a flex container. For example, inside it <code>margin: auto</code> works not only horizontally.
 ## Padding and margin shortcut
 
 <b>Margin</b> is the space around the element's border outside.  
