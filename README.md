@@ -59,3 +59,4 @@ By setting <code>box-sizing: border-box</code>, you change the way the element's
 ![box_sizing.png](media/pictures/box_sizing.png)
 
 In order not to type <code>box-sizing</code> manually for all elements, you should use the universal selector <code>\*</code>. It passes properties directly to every element on the page. Since <code>\*</code> is a very general selector, it must be specified at the very beginning of the CSS file.
+
