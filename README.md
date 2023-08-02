@@ -4,6 +4,7 @@ This repository was created to reflect the main points of the theory of web deve
 - [Flow and block model](#flow-and-block-model)
 - [Padding and margin shortcut](#padding-and-margin-shortcut)
 - [Borders](#borders)
+- [Useful links](#useful-links)
 
 
 ## Flow and block model 
@@ -16,16 +17,16 @@ A block-level element always starts on a new line, and the browsers automaticall
 A block-level element always takes up the full width available (stretches out to the left and right as far as it can).  
 For example, the <code>div</code>, <code>section</code>, <code>header</code>, <code>h1</code> - <code>h6</code> and <code>p</code> tags, when flowing, take up the entire width of their parent by default. Such elements are conventionally called *block elements*.  
 Example:  
-![block_elements_example.png](media/pictures/block_elements_example.png)  
+<kbd>![block_elements_example.png](media/pictures/block_elements_example.png)</kbd>  
 Here are the block-level elements in HTML:
 ![block_elements_tags.png](media/pictures/block_elements_tags.png)  
 
 #### Inline Elements
 An inline element does not start on a new line. It only takes up as much width as necessary.  
 Example (this is a \<span\> element inside a paragraph):  
-![inline_elements_example.png](media/pictures/inline_elements_example.png)  
+<kbd>![inline_elements_example.png](media/pictures/inline_elements_example.png)</kbd>  
 Here are the inline elements in HTML:
-![inline_elements_tags.png](media/pictures/inline_elements_tags.png)  
+![inline_elements_tags.png](media/pictures/inline_elements_tags.png)   
 
 Note, that the picture is not a block element, it is displayed with its original dimensions and can go beyond the parent block.
 
@@ -77,3 +78,10 @@ By setting <code>box-sizing: border-box</code>, you change the way the element's
 
 In order not to type <code>box-sizing</code> manually for all elements, you should use the universal selector <code>\*</code>. It passes properties directly to every element on the page. Since <code>\*</code> is a very general selector, it must be specified at the very beginning of the CSS file.
 
+## Useful links
+| **DESCRIPTION** | **LINK** |
+|:---------:|:---------:|
+| HTML tags list| [https://www.w3schools.com/tags/default.asp](https://www.w3schools.com/tags/default.asp)| 
+| HTML color names| [https://www.w3schools.com/tags/ref_colornames.asp](https://www.w3schools.com/tags/ref_colornames.asp) |
+| CSS color names| [https://doka.guide/css/web-colors/#nazvanie-cveta](https://doka.guide/css/web-colors/#nazvanie-cveta) | 
+| Web gradients| [https://webgradients.com/](https://webgradients.com/) | 
