@@ -210,6 +210,157 @@ console.log(randomNumber);        // for example, 0.9752705074780903
 let randomNumber = Math.random() * 10;
 console.log(randomNumber);       // for example, 5.3575687
 ```
+#### ✔️ Math.floor()
+The <code>Math.floor</code> command rounds down a number. That is, it rounds the argument to the nearest smaller integer.
+```bash
+Math.floor( 45.95);              //  45
+Math.floor(-45.95);              // -46
+```
+#### ✔️ length
+The <code>length</code> data property of an Array instance represents the number of elements in that array. 
+```bash
+let array = [1, 2, 3, 4, 5, 6];
+console.log(array.length)
+```
+#### ✔️ function 
+
+```bash
+function sayHello() {
+    alert('Hi, Alex'); 
+}
+
+sayHello();
+```
+```bash
+let names = ['Adam', 'Tirion', 'Mary', 'Margo', 'Pablo', 'Liam'];
+function getRandomElement() {
+  let randIndex = Math.floor(Math.random() * names.length);
+  console.log(randIndex);
+  console.log(names[randIndex]);
+}
+getRandomElement();
+```
+```bash
+let names = ['Adam', 'Tirion', 'Mary', 'Margo', 'Pablo', 'Liam'];
+function getRandomElement(arr) {
+  let randIndex = Math.floor(Math.random() * arr.length);
+  console.log(randIndex);
+  console.log(arr[randIndex]);
+}
+getRandomElement(names);
+```
+```bash
+function sayHello(name) {
+    return 'Hi, ' + name;
+}
+
+let greeting = sayHello('Ann');
+
+console.log(greeting);      // "Hi, Ann" — output to console
+alert(greeting);            // "Hi, Ann" — shown in modal window
+```
+#### ✔️ document 
+To work with page elements, JavaScript has a special box called <code>document</code>. This box contains all the information about the web page: URL, style sheets, encoding, hyperlinks, all texts. And yes, through the document you can access the control of any element on the page.
+
+Elements can be controlled through JavaScript - one just need to find them, for example, by the name of the element class.
+In addition to boxes, JavaScript has tools that can change everything that is in the boxes - not just document.
+
+For example, the <code>querySelector</code> tool. It works like a function and takes as input the class selector of the element you want to access:
+```bash
+let markElement = document.querySelector('.mark');
+```
+So the element with the <code>mark</code> class will get into the <code>markElement</code> variable. JavaScript can now change the element's content, style, and behavior.
+```bash
+let names = ['Adam', 'Tirion', 'Mary', 'Margo', 'Pablo', 'Liam'];
+function getRandomElement(arr) {
+  let randIndex = Math.floor(Math.random() * arr.length);
+  console.log(randIndex);
+  console.log(arr[randIndex]);
+}
+let name = document.querySelector('.name');
+names.textContent = getRandomElement(names);
+```
+The <code>textContent</code> property allows you to read or set the text content of an element.
+
+#### ✔️ addEventListener
+Syntax for adding a handler:
+```bash
+element.addEventListener(event, handler, [options]);
+```
+Example:
+```bash
+let button = document.querySelector('.button');
+
+button.addEventListener('click', function () {
+  // some actions after clicking
+   phrase.textContent = getRandomElement(names);
+}); 
+```
+#### ✔️ if-else construction
+```bash
+let phrases = ['do it', 'la-la-la-la-la-la', 'text'];
+
+function getRandomElement(arr) {
+  let randIndex = Math.floor(Math.random() * arr.length);
+  return arr[randIndex];
+}
+
+let phrase = document.querySelector('.phrase');
+let advice = document.querySelector('.advice');
+
+button.addEventListener('click', function () {
+  let randomElement = getRandomElement(phrases);
+  if (randomElement.length > 40){
+    advice.style.fontSize = '33px';
+  } 
+  else { 
+    advice.style.fontSize = '42px';
+  }
+  phrase.textContent = randomElement;
+});
+```
+#### ✔️ Objects
+<code>Objects</code> are used to store collections of different values and more complex entities.
+An object can be created using curly braces {...} with an optional list of properties. A property is a key:value pair, where the key is a string (also called a "property name") and the value can be anything.
+```bash
+let user = {     // object
+  name: "John",  
+  age: 30        
+};
+alert(user.name);
+delete user.age;
+```
+```bash
+let objects = [{text: 'first', image: 'https://1.gif'}, { text: 'second', image: 'https://2.png' }]
+```
+#### ✔️ smoothly 
+Let's connect the library for smoothly changing page elements before connectiong with <code>script.js</code>:
+```bash
+<script src="https://code.s3.yandex.net/web-code/smoothly.js"></script>
+<script src="script.js"></script>
+```
+```bash
+let objects = [{text: 'first', image: 'https://1.gif'}, { text: 'second', image: 'https://2.png' }]
+
+function getRandomElement(arr) {
+  let randIndex = Math.floor(Math.random() * arr.length);
+  return arr[randIndex];
+}
+let phrase = document.querySelector('.phrase');
+let image = document.querySelector('.image');
+
+button.addEventListener('click', function () {
+  let randomElement = getRandomElement(objects);
+  smoothly(phrase, 'textContent', randomElement.text);
+  smoothly(image, 'src', randomElement.image);
+}
+```
+#### ✔️ for
+```bash
+for (let i = 0; i <= 2; i = i + 1){
+  smoothly(phrase, 'textContent', phrases[i].text);
+}
+```
 ## Useful links
 | **DESCRIPTION** | **LINK** |
 |:---------:|:---------:|
