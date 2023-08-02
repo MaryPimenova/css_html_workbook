@@ -1,11 +1,38 @@
 # CSS and HTML workbook
 This repository was created to reflect the main points of the theory of web development self-study.
 ## 🎀 Table of contents
+- [CSS rules](#css-rules)
 - [Flow and block model](#flow-and-block-model)
 - [Padding and margin shortcut](#padding-and-margin-shortcut)
 - [Borders](#borders)
+- [Shadows](#shadows)
 - [Useful links](#useful-links)
 
+## CSS rules
+Several classes should be written inside the value of one class attribute separated by a space:  
+
+```bash
+<div class="first second"></div>
+```
+
+For example, general properties can be specified by a rule on the <code>text</code> class, and unique properties can be specified by an individual <code>special-text</code> class.  
+
+```bash
+<p class="text">Composition of the day:</p>
+```
+```bash
+<p class="text special-text">Bonobo, Rhye - Break Apart</p>
+```
+```bash
+.text {
+   font-size: 20px;
+}
+.special-text {
+     font-size: 32px;
+     color: #FEEB78;
+}
+```
+Through a space, you can specify any number of classes.
 
 ## Flow and block model 
 Document flow (data flow) in HTML is the order in which elements are displayed on the page. In the usual form, all blocks are displayed in the order in which they are written inside the HTML document.
@@ -54,6 +81,19 @@ So, the cards fit in a line, but not close, although the indents between them we
 The special value <code>auto</code> works with the centering of block elements. It automatically sets the maximum possible horizontal offset. Setting the <code>margin-left</code> and <code>margin-right</code> properties to <code>auto</code> will get the maximum padding on both sides, and the element will be centered on its parent.  
 ![element_centering.png](media/pictures/element_centering.png)   
 
+**An example using a shortcut**  
+Let's put the element in the center of the screen, giving its left anf right margins a value of <code>auto</code>. Let's do this with just one property, the margins above and below can be set to 0:  
+```bash
+margin: 0 auto;
+```
+
+### Centering elements: display: flex
+Let's look at a way to automatically center an element. For the <code>display</code> property, in addition to <code>block</code>, <code>inline</code>, and <code>inline-block</code>, there is a special <code>flex</code> value:
+```bash
+display:flex;
+```
+![display_flex_property.png](media/pictures/display_flex_property.png)   
+An element with this property becomes a flex container. For example, inside it <code>margin: auto</code> works not only horizontally.
 ## Padding and margin shortcut
 
 <b>Margin</b> is the space around the element's border outside.  
@@ -78,13 +118,21 @@ When they say “element 200 by 300”, they mean the size of the content up to 
 
 Placement direction - ***clockwise***, starting from the top.  
 *with 4 values*: each side has its own value  
-<code>padding: 20px 15px 30px 15px;</code>  
+```bash
+padding: 20px 15px 30px 15px;
+```
 *with 3 values*: top - 10px, sides - 20px, bottom - 30px  
-<code>padding: 10px 20px 30px; </code>  
+```bash
+padding: 10px 20px 30px;
+```
 *with 2 values*: top and bottom - 10px, sides - 20px  
-<code>padding: 10px 20px;</code>  
+```bash
+padding: 10px 20px;
+```
 *with 1 value*: 10px on all sides  
-<code>padding: 10px; </code>  
+```bash
+padding: 10px;
+```
 This approach works for both margin and padding.
 
 ## Borders
@@ -94,6 +142,7 @@ Element borders are located between margin and padding. In styles, borders are d
 <code>border-style: solid</code> - *начертание границы (see picture)*  
 ![border_styles.png](media/pictures/border_style.png)
 Instead of writing the three properties separately, developers use the short form. The color, width and style values are indicated inside one short property (shortcut) separated by a space:  
+
 <code>border: 3px solid #000;</code> - *3px solid black border (непрерывная граница черного цвета толщиной 3px)*  
 
 The box-sizing property determines the behavior of borders and padding. By default, the <code>box-sizing: content-box</code> rule applies to all elements, borders, and padding expand the element.  
@@ -101,6 +150,25 @@ By setting <code>box-sizing: border-box</code>, you change the way the element's
 ![box_sizing.png](media/pictures/box_sizing.png)
 
 In order not to type <code>box-sizing</code> manually for all elements, you should use the universal selector <code>\*</code>. It passes properties directly to every element on the page. Since <code>\*</code> is a very general selector, it must be specified at the very beginning of the CSS file.
+## Shadows
+Shadow is a useful design tool. The <code>box-shadow</code> property is responsible for its creation.
+The property tells the browser on which side of the element the shadow should be drawn, whether to make it larger or smaller, and in what color. In code it looks like this:
+```bash
+div {
+     box-shadow: -2px 2px 5px #FD6969;
+  }
+```
+It means that shadow is shifted 2px to the left, 2px down, blur radius is equal to 5px, shadow color is reddish (#FD6969).  
+
+A sequence of values that describe the shadow:
+1. ***horizontal shift*** (a negative value places the shadow to the left of the element, a positive value to the right);  
+2. ***vertical shift*** (a negative value places the shadow above the element, a positive value below it);  
+3. ***blur radius*** (the larger the value, the wider and paler the shadow);  
+4. ***color*** (specified in the same way as the color of the text or background).
+   
+Sometimes the shadow doesn't need to be moved, just blurring is enough. In this case, the first two values are 0.
+
+A shadow can be created not only for the borders of an element, but also for text. In this case, the <code>text-shadow</code> property is used. It works in a similar way.
 
 ## Useful links
 | **DESCRIPTION** | **LINK** |
