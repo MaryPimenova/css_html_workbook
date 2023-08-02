@@ -11,8 +11,9 @@ This repository was created to reflect the main points of the theory of web deve
 Document flow (data flow) in HTML is the order in which elements are displayed on the page. In the usual form, all blocks are displayed in the order in which they are written inside the HTML document.
 The browser reads the file code from top to bottom and renders the page in the same way. Therefore, the elements are said to follow each other in a flow.  
 Every HTML element has a default display value, depending on what type of element it is.  
-There are two display values: **block** and **inline**.  
-#### Block-level Elements
+There are two display values: **block** and **inline**.
+![block_and_inline_elements.png](media/pictures/block_and_inline_elements.png)
+### Block-level Elements
 A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.  
 A block-level element always takes up the full width available (stretches out to the left and right as far as it can).  
 For example, the <code>div</code>, <code>section</code>, <code>header</code>, <code>h1</code> - <code>h6</code> and <code>p</code> tags, when flowing, take up the entire width of their parent by default. Such elements are conventionally called *block elements*.  
@@ -21,15 +22,33 @@ Example:
 Here are the block-level elements in HTML:
 ![block_elements_tags.png](media/pictures/block_elements_tags.png)  
 
-#### Inline Elements
+Note, that the picture is not a block element, it is displayed with its original dimensions and can go beyond the parent block.
+
+### Inline Elements
 An inline element does not start on a new line. It only takes up as much width as necessary.  
+If they are in a row, then by default they are all on the same line. They cannot be given a width or height - they ignore sizing through styles.
 Example (this is a \<span\> element inside a paragraph):  
 <kbd>![inline_elements_example.png](media/pictures/inline_elements_example.png)</kbd>  
 Here are the inline elements in HTML:
 ![inline_elements_tags.png](media/pictures/inline_elements_tags.png)   
 
-Note, that the picture is not a block element, it is displayed with its original dimensions and can go beyond the parent block.
+### Inline-block Elements
+What to do when blocks with certain sizes should follow each other horizontally and not occupy the entire line? You can set the elements of the combined type - block-line.  
+On the one hand, they do not take up the entire horizontal, on the other hand, allows to set a width and height on the element via CSS. For example, this is how <img> elements behave. 
+The type is overridden by the display property:  
 
+<code>display:block;</code> - *makes the element of block type*  
+
+<code>display: inline;</code> - *makes the element of inline type*  
+
+<code>display: inline-block;</code> - *makes the element of inline-block type*  
+
+![different_types_of_elements.png](media/pictures/different_types_of_elements.png)   
+Compared to <code>display: inline</code>, the major difference is that <code>display: inline-block</code> allows to set a width and height on the element.  
+Also, with <code>display: inline-block</code>, the top and bottom margins/paddings are respected, but with <code>display: inline</code> they are not.  
+Compared to <code>display: block</code>, the major difference is that <code>display: inline-block</code> does not add a line-break after the element, so the element can sit next to other elements.
+
+## Padding and margin shortcut
 
 <b>Margin</b> is the space around the element's border outside.  
 Unlike outer margins, <b>padding</b> is located inside the element and creates free space between the border and the content. The word "padding" is taken from tailors and means a shoulder pad - a pad between the fabric of the jacket and the shoulder.
@@ -49,7 +68,6 @@ The model of any element looks like this:
 When they say “element 200 by 300”, they mean the size of the content up to and including the border, margin is not included here.
 
 
-## Padding and margin shortcut
 ![padding_margin_shortcut.png](media/pictures/padding_margin_shortcut.png)
 
 Placement direction - ***clockwise***, starting from the top.  
@@ -85,3 +103,6 @@ In order not to type <code>box-sizing</code> manually for all elements, you shou
 | HTML color names| [https://www.w3schools.com/tags/ref_colornames.asp](https://www.w3schools.com/tags/ref_colornames.asp) |
 | CSS color names| [https://doka.guide/css/web-colors/#nazvanie-cveta](https://doka.guide/css/web-colors/#nazvanie-cveta) | 
 | Web gradients| [https://webgradients.com/](https://webgradients.com/) | 
+
+
+[Back to content](#-table-of-contents)
