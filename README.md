@@ -50,3 +50,12 @@ Element borders are located between margin and padding. In styles, borders are d
 <code>border-color: #000;</code> - *цвет границы*  
 <code>border-width: 1px;</code> - *толщина границы в px*  
 <code>border-style: solid</code> - *начертание границы (see picture)*  
+![border_styles.png](media/pictures/border_style.png)
+Instead of writing the three properties separately, developers use the short form. The color, width and style values are indicated inside one short property (shortcut) separated by a space:  
+<code>border: 3px solid #000;</code> - *3px solid black border (непрерывная граница черного цвета толщиной 3px)*  
+
+The box-sizing property determines the behavior of borders and padding. By default, the <code>box-sizing: content-box</code> rule applies to all elements, borders, and padding expand the element.  
+By setting <code>box-sizing: border-box</code>, you change the way the element's dimensions are calculated: borders and padding are drawn inward. The total width will be equal to the <code>width</code> value. Pretty intuitive behavior, so normal practice is to set it for all elements on the page at once.
+![box_sizing.png](media/pictures/box_sizing.png)
+
+In order not to type <code>box-sizing</code> manually for all elements, you should use the universal selector <code>\*</code>. It passes properties directly to every element on the page. Since <code>\*</code> is a very general selector, it must be specified at the very beginning of the CSS file.
