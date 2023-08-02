@@ -8,10 +8,28 @@ This repository was created to reflect the main points of the theory of web deve
 
 ## Flow and block model 
 Document flow (data flow) in HTML is the order in which elements are displayed on the page. In the usual form, all blocks are displayed in the order in which they are written inside the HTML document.
-The browser reads the file code from top to bottom and renders the page in the same way. Therefore, the elements are said to follow each other in a flow.
+The browser reads the file code from top to bottom and renders the page in the same way. Therefore, the elements are said to follow each other in a flow.  
+Every HTML element has a default display value, depending on what type of element it is.  
+There are two display values: **block** and **inline**.  
+#### Block-level Elements
+A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.  
+A block-level element always takes up the full width available (stretches out to the left and right as far as it can).  
+For example, the <code>div</code>, <code>section</code>, <code>header</code>, <code>h1</code> - <code>h6</code> and <code>p</code> tags, when flowing, take up the entire width of their parent by default. Such elements are conventionally called *block elements*.  
+Example:
 
-The <code>div</code>, <code>section</code>, <code>header</code>, <code>h1</code> - <code>h6</code> and <code>p</code> tags, when flowing, take up the entire width of their parent by default. Such elements are conventionally called *block elements*.  
-The picture is not a block element, it is displayed with its original dimensions and can go beyond the parent block.
+Here are the block-level elements in HTML:
+
+
+#### Inline Elements
+An inline element does not start on a new line. It only takes up as much width as necessary.
+
+Example (this is a \<span\> element inside a paragraph):
+
+Here are the inline elements in HTML:
+
+
+Note, that the picture is not a block element, it is displayed with its original dimensions and can go beyond the parent block.
+
 
 <b>Margin</b> is the space around the element's border outside.  
 Unlike outer margins, <b>padding</b> is located inside the element and creates free space between the border and the content. The word "padding" is taken from tailors and means a shoulder pad - a pad between the fabric of the jacket and the shoulder.
