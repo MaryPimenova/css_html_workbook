@@ -119,6 +119,25 @@ Example:
   </table>
 ```
 ## HTML tags, classes, ids
+Tag  <code>\<hr\></code> draws a horizontal line that varies in appearance depending on the settings used. The <code>\<hr\></code> tag refers to block elements, the line always starts on a new line, and after it, all elements are displayed on the next line. The closing tag is not required.
+```bash
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Тег HR</title>
+ </head>
+ <body>
+ <hr>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh 
+  euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim 
+  ad minim veniam, quis nostrud exerci tution ullamcorper suscipit lobortis nisl 
+  ut aliquip ex ea commodo consequat.</p>
+ <hr> 
+ </body>
+</html>
+```
+![horizontal_line.png](media/pictures/horizontal_line.png)
 Several classes should be written inside the value of one class attribute separated by a space:  
 
 ```bash
