@@ -3,8 +3,8 @@ This repository was created to reflect the main points of the theory of web deve
 > HTML and CSS are not programming languages! HTML - Hypertext Markup Language (язык гипертекстовой разметки). CSS - Cascading Style Sheets (каскадные таблицы стилей).
 ## 🎀 Table of contents
 - [Introduction to HTML](#introduction-to-html)
-- [Lists in HTML](#lists-in-html)
-- [CSS rules](#css-rules)
+- [Lists and tables in HTML](#lists-and-tables-in-html)
+- [HTML tags, classes, ids](#html-tags-classes-ids)
 - [Flow and block model](#flow-and-block-model)
 - [Padding and margin shortcut](#padding-and-margin-shortcut)
 - [Borders](#borders)
@@ -42,7 +42,8 @@ An HTML comment begins with <code>\<! ––</code> and the comment closes with 
 
 You can also quickly comment or uncomment a line of code with the keyboard shortcut <code>Ctrl + /</code>.
 
-## Lists in HTML
+## Lists and tables in HTML
+### Lists
 HTML lists are used to group related pieces of information. There are three types of lists:
 
 1. unordered  list <code>\<ul\></code> (неупорядоченный, маркированный список): each element of the list (list item) <code>\<li\></code> is marked with a label, such as a filled circle;
@@ -54,6 +55,9 @@ HTML lists are used to group related pieces of information. There are three type
   <li>IBM</li>
 </ul>
 ```
+You may use shortcut <code>ALT+SHIFT+↓</code> for adding new list items.
+Note, that this shortcut is useful in all situations of duplicating lines of code!
+
 ![unordered_list.png](media/pictures/unordered_list.png)  
 2. ordered list <code>\<ol\></code> (упорядоченный, нумерованный список): each element of the list <code>\<li\></code> is marked with a number;
 ```bash
@@ -82,7 +86,58 @@ List elements behave like block elements, stacked one below the other and taking
 ```
 ![list_of_definitions.png](media/pictures/list_of_definitions.png)  
 
-## CSS rules
+### Tables
+HTML tables allow web developers to arrange data into rows and columns. You should use tags <code>\<table\></code> and <code>\</table\></code> to create a new table. 
+#### Table cells
+Each table cell is defined by a <code>\<td></code> and a <code>\</td></code> tag. Everything between <code>\<td></code> and <code>\</td></code> are the content of the table cell.
+#### Table rows
+Each table row starts with a <code>\<tr></code> and ends with a <code>\</tr></code> tag.
+#### Table headers
+Sometimes you want your cells to be table header cells. In those cases use the <code>\<th></code> tag instead of the <code>\<td></code> tag:
+#### Table name
+Tags <code>\<caption\></code> and <code>\</caption\></code>	define a table caption.
+
+Example:
+```bash
+<table border="1">
+    <caption>Table name</caption>
+    <tr>
+        <th>1 element of the first row, type: header</th>
+        <th>2 element of the first row, type: header</th>
+        <th>3 element of the first row, type: header</th>
+    </tr>
+    <tr>
+        <td>1 element of the second row</td>
+        <td>2 element of the second row</td>
+        <td>3 element of the second row</td>
+    </tr>
+    <tr>
+        <td>1 element of the third row</td>
+        <td>2 element of the third row</td>
+        <td>3 element of the third row</td>
+    </tr>
+  </table>
+```
+## HTML tags, classes, ids
+Tag  <code>\<hr\></code> draws a horizontal line that varies in appearance depending on the settings used. The <code>\<hr\></code> tag refers to block elements, the line always starts on a new line, and after it, all elements are displayed on the next line. The closing tag is not required.
+```bash
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Тег HR</title>
+ </head>
+ <body>
+ <hr>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh 
+  euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim 
+  ad minim veniam, quis nostrud exerci tution ullamcorper suscipit lobortis nisl 
+  ut aliquip ex ea commodo consequat.</p>
+ <hr> 
+ </body>
+</html>
+```
+![horizontal_line.png](media/pictures/horizontal_line.png)
 Several classes should be written inside the value of one class attribute separated by a space:  
 
 ```bash
@@ -128,7 +183,7 @@ Note, that the picture is not a block element, it is displayed with its original
 ### Inline Elements
 An inline element does not start on a new line. It only takes up as much width as necessary.  
 If they are in a row, then by default they are all on the same line. They cannot be given a width or height - they ignore sizing through styles.
-Example (this is a \<span\> element inside a paragraph):  
+Example (this is a ***\<span\>*** element inside a paragraph):  
 <kbd>![inline_elements_example.png](media/pictures/inline_elements_example.png)</kbd>  
 Here are the inline elements in HTML:
 ![inline_elements_tags.png](media/pictures/inline_elements_tags.png)   
