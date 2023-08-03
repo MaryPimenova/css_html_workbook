@@ -1,12 +1,86 @@
 # CSS and HTML workbook
 This repository was created to reflect the main points of the theory of web development self-study.
+> HTML and CSS are not programming languages! HTML - Hypertext Markup Language (язык гипертекстовой разметки). CSS - Cascading Style Sheets (каскадные таблицы стилей).
 ## 🎀 Table of contents
+- [Introduction to HTML](#introduction-to-html)
+- [Lists in HTML](#lists-in-html)
 - [CSS rules](#css-rules)
 - [Flow and block model](#flow-and-block-model)
 - [Padding and margin shortcut](#padding-and-margin-shortcut)
 - [Borders](#borders)
 - [Shadows](#shadows)
+- [Introduction to JS](#introduction-to-js)
 - [Useful links](#useful-links)
+
+## Introduction to HTML
+In VS code you should start with creating <code>index.html</code> file and then in this file write <code>!</code> and press <code>Tab</code> button to get the next piece of code:
+```bash
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   lorem50
+</body>
+</html>
+```
+#### Lorem Ipsum
+Lorem Ipsum is fish text often used in print and web design. Lorem Ipsum has been the standard "fish" for Latin texts since the early 16th century. It has long been found that when evaluating design and composition, readable text makes it difficult to concentrate.
+
+Lorem Ipsum is used because it provides more or less standard template padding, as well as actual distribution of letters and spaces in paragraphs, which is not obtained by simply duplicating "Here is your text.. Here is your text.. Here is your text.."
+
+Number in <code>lorem</code> function shows the required amount of generated Latin text.
+#### Word wrap via ALT+Z
+For the convenience of presenting long lines of text on the screen, you need to use the keyboard shortcut <code>ALT+Z</code>.
+#### Live server extension
+After installing <code>Live Server</code> extension press the button <code>go live</code> from the status bar to turn the server on/off. A Quick Development Live Server gives an opportunity for live browser reload. One may start or stop server by a single click from status bar.
+#### Comments in the code section
+An HTML comment begins with <code>\<! ––</code> and the comment closes with <code>––\></code> . HTML comments are visible to anyone that views the page source code, but are not rendered when the HTML document is rendered by a browser. 
+
+You can also quickly comment or uncomment a line of code with the keyboard shortcut <code>Ctrl + /</code>.
+
+## Lists in HTML
+HTML lists are used to group related pieces of information. There are three types of lists:
+
+1. unordered  list <code>\<ul\></code> (неупорядоченный, маркированный список): each element of the list (list item) <code>\<li\></code> is marked with a label, such as a filled circle;
+```bash
+<ul>
+  <li>Microsoft</li>
+  <li>Google</li>
+  <li>Apple</li>
+  <li>IBM</li>
+</ul>
+```
+![unordered_list.png](media/pictures/unordered_list.png)  
+2. ordered list <code>\<ol\></code> (упорядоченный, нумерованный список): each element of the list <code>\<li\></code> is marked with a number;
+```bash
+<ol>
+  <li>Microsoft</li>
+  <li>Google</li>
+  <li>Apple</li>
+  <li>IBM</li>
+</ol>
+```
+![ordered_list.png](media/pictures/ordered_list.png)  
+3. the list of definitions <code>\<dl\></code> consists of pairs of term <code>\<dt\></code>  - <code>\<dd\></code>  definition.
+Each list is a container containing list elements or term-definition pairs.
+
+List elements behave like block elements, stacked one below the other and taking up the full width of the container block. Each list item has an additional box on the side that is not part of the layout.
+```bash
+<dl>
+  <dt>Режиссер:</dt>
+    <dd>Петр Точилин</dd>
+  <dt>В ролях:</dt>
+    <dd>Андрей Гайдулян</dd>
+    <dd>Алексей Гаврилов</dd>
+    <dd>Виталий Гогунский</dd>
+    <dd>Мария Кожевникова</dd>
+</dl>
+```
+![list_of_definitions.png](media/pictures/list_of_definitions.png)  
 
 ## CSS rules
 Several classes should be written inside the value of one class attribute separated by a space:  
@@ -170,6 +244,195 @@ Sometimes the shadow doesn't need to be moved, just blurring is enough. In this 
 
 A shadow can be created not only for the borders of an element, but also for text. In this case, the <code>text-shadow</code> property is used. It works in a similar way.
 
+## Introduction to JS
+#### ✔️ alert
+Using the <code>alert()</code> directive, you can display a modal window with some text on the user's screen.
+```bash
+alert("Message")
+```
+Due to the fact that the window is modal, work with the browser interface and pages will be blocked. This is inconvenient. A modal window for the user is a window that blocks his work with the browser until he closes this window.
+
+This is the fastest and easiest way to say something to the user, but such a window cannot be styled in any way, which means it is better to use it only for interface prototyping. In the final version of the web page, it is not desirable to use such modal dialogs.
+#### ✔️ console.log
+Perhaps one of the most used commands in JavaScript is <code>console.log</code>:
+```bash
+console.log('Useful information');
+```
+Using the <code>console.log</code> command, you can print information to the browser console. Only developers will be able to see this information, it will be hidden from ordinary users.
+#### ✔️ let
+The <code>let</code> directive declares a block-scoped variable with the ability to initialize it with a value.
+```bash
+let pages;
+pages = 358; 
+```
+```bash
+let pages = 358; 
+```
+```bash
+let pages = 666;
+pages = pages + 5;
+```
+#### ✔️ Math.random()
+To generate random numbers, there is the <code>Math.random()</code> command. It returns a random number between 0 and 1, including zero and not including 1. Math.random() generates a number between 0 and 0.99999999999. So Math.random() * 10 generates numbers from 0 to 9.9999999999.
+```bash
+let randomNumber = Math.random();
+console.log(randomNumber);        // for example, 0.9752705074780903 
+```
+```bash
+let randomNumber = Math.random() * 10;
+console.log(randomNumber);       // for example, 5.3575687
+```
+#### ✔️ Math.floor()
+The <code>Math.floor</code> command rounds down a number. That is, it rounds the argument to the nearest smaller integer.
+```bash
+Math.floor( 45.95);              //  45
+Math.floor(-45.95);              // -46
+```
+#### ✔️ length
+The <code>length</code> data property of an Array instance represents the number of elements in that array. 
+```bash
+let array = [1, 2, 3, 4, 5, 6];
+console.log(array.length)
+```
+#### ✔️ function 
+
+```bash
+function sayHello() {
+    alert('Hi, Alex'); 
+}
+
+sayHello();
+```
+```bash
+let names = ['Adam', 'Tirion', 'Mary', 'Margo', 'Pablo', 'Liam'];
+function getRandomElement() {
+  let randIndex = Math.floor(Math.random() * names.length);
+  console.log(randIndex);
+  console.log(names[randIndex]);
+}
+getRandomElement();
+```
+```bash
+let names = ['Adam', 'Tirion', 'Mary', 'Margo', 'Pablo', 'Liam'];
+function getRandomElement(arr) {
+  let randIndex = Math.floor(Math.random() * arr.length);
+  console.log(randIndex);
+  console.log(arr[randIndex]);
+}
+getRandomElement(names);
+```
+```bash
+function sayHello(name) {
+    return 'Hi, ' + name;
+}
+
+let greeting = sayHello('Ann');
+
+console.log(greeting);      // "Hi, Ann" — output to console
+alert(greeting);            // "Hi, Ann" — shown in modal window
+```
+#### ✔️ document 
+To work with page elements, JavaScript has a special box called <code>document</code>. This box contains all the information about the web page: URL, style sheets, encoding, hyperlinks, all texts. And yes, through the document you can access the control of any element on the page.
+
+Elements can be controlled through JavaScript - one just need to find them, for example, by the name of the element class.
+In addition to boxes, JavaScript has tools that can change everything that is in the boxes - not just document.
+
+For example, the <code>querySelector</code> tool. It works like a function and takes as input the class selector of the element you want to access:
+```bash
+let markElement = document.querySelector('.mark');
+```
+So the element with the <code>mark</code> class will get into the <code>markElement</code> variable. JavaScript can now change the element's content, style, and behavior.
+```bash
+let names = ['Adam', 'Tirion', 'Mary', 'Margo', 'Pablo', 'Liam'];
+function getRandomElement(arr) {
+  let randIndex = Math.floor(Math.random() * arr.length);
+  console.log(randIndex);
+  console.log(arr[randIndex]);
+}
+let name = document.querySelector('.name');
+names.textContent = getRandomElement(names);
+```
+The <code>textContent</code> property allows you to read or set the text content of an element.
+
+#### ✔️ addEventListener
+Syntax for adding a handler:
+```bash
+element.addEventListener(event, handler, [options]);
+```
+Example:
+```bash
+let button = document.querySelector('.button');
+
+button.addEventListener('click', function () {
+  // some actions after clicking
+   phrase.textContent = getRandomElement(names);
+}); 
+```
+#### ✔️ if-else construction
+```bash
+let phrases = ['do it', 'la-la-la-la-la-la', 'text'];
+
+function getRandomElement(arr) {
+  let randIndex = Math.floor(Math.random() * arr.length);
+  return arr[randIndex];
+}
+
+let phrase = document.querySelector('.phrase');
+let advice = document.querySelector('.advice');
+
+button.addEventListener('click', function () {
+  let randomElement = getRandomElement(phrases);
+  if (randomElement.length > 40){
+    advice.style.fontSize = '33px';
+  } 
+  else { 
+    advice.style.fontSize = '42px';
+  }
+  phrase.textContent = randomElement;
+});
+```
+#### ✔️ Objects
+<code>Objects</code> are used to store collections of different values and more complex entities.
+An object can be created using curly braces {...} with an optional list of properties. A property is a key:value pair, where the key is a string (also called a "property name") and the value can be anything.
+```bash
+let user = {     // object
+  name: "John",  
+  age: 30        
+};
+alert(user.name);
+delete user.age;
+```
+```bash
+let objects = [{text: 'first', image: 'https://1.gif'}, { text: 'second', image: 'https://2.png' }]
+```
+#### ✔️ smoothly 
+Let's connect the library for smoothly changing page elements before connectiong with <code>script.js</code>:
+```bash
+<script src="https://code.s3.yandex.net/web-code/smoothly.js"></script>
+<script src="script.js"></script>
+```
+```bash
+let objects = [{text: 'first', image: 'https://1.gif'}, { text: 'second', image: 'https://2.png' }]
+
+function getRandomElement(arr) {
+  let randIndex = Math.floor(Math.random() * arr.length);
+  return arr[randIndex];
+}
+let phrase = document.querySelector('.phrase');
+let image = document.querySelector('.image');
+
+button.addEventListener('click', function () {
+  let randomElement = getRandomElement(objects);
+  smoothly(phrase, 'textContent', randomElement.text);
+  smoothly(image, 'src', randomElement.image);
+}
+```
+#### ✔️ for
+```bash
+for (let i = 0; i <= 2; i = i + 1){
+  smoothly(phrase, 'textContent', phrases[i].text);
+}
+```
 ## Useful links
 | **DESCRIPTION** | **LINK** |
 |:---------:|:---------:|
@@ -177,6 +440,7 @@ A shadow can be created not only for the borders of an element, but also for tex
 | HTML color names| [https://www.w3schools.com/tags/ref_colornames.asp](https://www.w3schools.com/tags/ref_colornames.asp) |
 | CSS color names| [https://doka.guide/css/web-colors/#nazvanie-cveta](https://doka.guide/css/web-colors/#nazvanie-cveta) | 
 | Web gradients| [https://webgradients.com/](https://webgradients.com/) | 
+| Lists in HTML| [https://html5book.ru/html-lists/](https://html5book.ru/html-lists/) | 
 
 
 [Back to content](#-table-of-contents)
