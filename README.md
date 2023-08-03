@@ -496,6 +496,7 @@ for (let i = 0; i <= 2; i = i + 1){
 | CSS color names| [https://doka.guide/css/web-colors/#nazvanie-cveta](https://doka.guide/css/web-colors/#nazvanie-cveta) | 
 | Web gradients| [https://webgradients.com/](https://webgradients.com/) | 
 | Lists in HTML | [https://html5book.ru/html-lists/](https://html5book.ru/html-lists/) | 
-| 30 CSS selectors | [https://webdesign.tutsplus.com/ru/the-30-css-selectors-you-must-memorize--net-16048t](https://webdesign.tutsplus.com/ru/the-30-css-selectors-you-must-memorize--net-16048t) | 
+| 30 CSS selectors | [https://webdesign.tutsplus.com/ru/the-30-css-selectors-you-must-memorize--net-16048t](https://webdesign.tutsplus.com/ru/the-30-css-selectors-you-must-memorize--net-16048t) |
+| HTML Special Characters| [https://html5book.ru/specsimvoly-html/](https://html5book.ru/specsimvoly-html/) | 
 
 [Back to content](#-table-of-contents)
