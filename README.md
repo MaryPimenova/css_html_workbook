@@ -137,7 +137,7 @@ Tag  <code>\<hr\></code> draws a horizontal line that varies in appearance depen
  </body>
 </html>
 ```
-![horizontal_line.png](media/pictures/horizontal_line.png)
+![horizontal_line.png](media/pictures/horizontal_line.png)  
 Several classes should be written inside the value of one class attribute separated by a space:  
 
 ```bash
@@ -495,7 +495,7 @@ for (let i = 0; i <= 2; i = i + 1){
 | HTML color names| [https://www.w3schools.com/tags/ref_colornames.asp](https://www.w3schools.com/tags/ref_colornames.asp) |
 | CSS color names| [https://doka.guide/css/web-colors/#nazvanie-cveta](https://doka.guide/css/web-colors/#nazvanie-cveta) | 
 | Web gradients| [https://webgradients.com/](https://webgradients.com/) | 
-| Lists in HTML| [https://html5book.ru/html-lists/](https://html5book.ru/html-lists/) | 
-
+| Lists in HTML | [https://html5book.ru/html-lists/](https://html5book.ru/html-lists/) | 
+| 30 CSS selectors | [https://webdesign.tutsplus.com/ru/the-30-css-selectors-you-must-memorize--net-16048t](https://webdesign.tutsplus.com/ru/the-30-css-selectors-you-must-memorize--net-16048t) | 
 
 [Back to content](#-table-of-contents)
