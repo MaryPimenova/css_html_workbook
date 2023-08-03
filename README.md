@@ -2,6 +2,8 @@
 This repository was created to reflect the main points of the theory of web development self-study.
 > HTML and CSS are not programming languages! HTML - Hypertext Markup Language (язык гипертекстовой разметки). CSS - Cascading Style Sheets (каскадные таблицы стилей).
 ## 🎀 Table of contents
+- [Introduction to HTML](#introduction-to-html)
+- [Lists in HTML](#lists-in-html)
 - [CSS rules](#css-rules)
 - [Flow and block model](#flow-and-block-model)
 - [Padding and margin shortcut](#padding-and-margin-shortcut)
@@ -9,6 +11,76 @@ This repository was created to reflect the main points of the theory of web deve
 - [Shadows](#shadows)
 - [Introduction to JS](#introduction-to-js)
 - [Useful links](#useful-links)
+
+## Introduction to HTML
+In VS code you should start with creating <code>index.html</code> file and then in this file write <code>!</code> and press <code>Tab</code> button to get the next piece of code:
+```bash
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   lorem50
+</body>
+</html>
+```
+#### Lorem Ipsum
+Lorem Ipsum is fish text often used in print and web design. Lorem Ipsum has been the standard "fish" for Latin texts since the early 16th century. It has long been found that when evaluating design and composition, readable text makes it difficult to concentrate.
+
+Lorem Ipsum is used because it provides more or less standard template padding, as well as actual distribution of letters and spaces in paragraphs, which is not obtained by simply duplicating "Here is your text.. Here is your text.. Here is your text.."
+
+Number in <code>lorem</code> function shows the required amount of generated Latin text.
+#### Word wrap via ALT+Z
+For the convenience of presenting long lines of text on the screen, you need to use the keyboard shortcut <code>ALT+Z</code>.
+#### Live server extension
+After installing <code>Live Server</code> extension press the button <code>go live</code> from the status bar to turn the server on/off. A Quick Development Live Server gives an opportunity for live browser reload. One may start or stop server by a single click from status bar.
+#### Comments in the code section
+An HTML comment begins with <code>\<! ––</code> and the comment closes with <code>––\></code> . HTML comments are visible to anyone that views the page source code, but are not rendered when the HTML document is rendered by a browser. 
+
+You can also quickly comment or uncomment a line of code with the keyboard shortcut <code>Ctrl + /</code>.
+
+## Lists in HTML
+HTML lists are used to group related pieces of information. There are three types of lists:
+
+1. unordered  list <code>\<ul\></code> (неупорядоченный, маркированный список): each element of the list (list item) <code>\<li\></code> is marked with a label, such as a filled circle;
+```bash
+<ul>
+  <li>Microsoft</li>
+  <li>Google</li>
+  <li>Apple</li>
+  <li>IBM</li>
+</ul>
+```
+![unordered_list.png](media/pictures/unordered_list.png)  
+2. ordered list <code>\<ol\></code> (упорядоченный, нумерованный список): each element of the list <code>\<li\></code> is marked with a number;
+```bash
+<ol>
+  <li>Microsoft</li>
+  <li>Google</li>
+  <li>Apple</li>
+  <li>IBM</li>
+</ol>
+```
+![ordered_list.png](media/pictures/ordered_list.png)  
+3. the list of definitions <code>\<dl\></code> consists of pairs of term <code>\<dt\></code>  - <code>\<dd\></code>  definition.
+Each list is a container containing list elements or term-definition pairs.
+
+List elements behave like block elements, stacked one below the other and taking up the full width of the container block. Each list item has an additional box on the side that is not part of the layout.
+```bash
+<dl>
+  <dt>Режиссер:</dt>
+    <dd>Петр Точилин</dd>
+  <dt>В ролях:</dt>
+    <dd>Андрей Гайдулян</dd>
+    <dd>Алексей Гаврилов</dd>
+    <dd>Виталий Гогунский</dd>
+    <dd>Мария Кожевникова</dd>
+</dl>
+```
+![list_of_definitions.png](media/pictures/list_of_definitions.png)  
 
 ## CSS rules
 Several classes should be written inside the value of one class attribute separated by a space:  
@@ -368,6 +440,7 @@ for (let i = 0; i <= 2; i = i + 1){
 | HTML color names| [https://www.w3schools.com/tags/ref_colornames.asp](https://www.w3schools.com/tags/ref_colornames.asp) |
 | CSS color names| [https://doka.guide/css/web-colors/#nazvanie-cveta](https://doka.guide/css/web-colors/#nazvanie-cveta) | 
 | Web gradients| [https://webgradients.com/](https://webgradients.com/) | 
+| Lists in HTML| [https://html5book.ru/html-lists/](https://html5book.ru/html-lists/) | 
 
 
 [Back to content](#-table-of-contents)
