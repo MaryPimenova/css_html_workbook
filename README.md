@@ -5,6 +5,7 @@ This repository was created to reflect the main points of the theory of web deve
 - [Introduction to HTML](#introduction-to-html)
 - [Lists and tables in HTML](#lists-and-tables-in-html)
 - [HTML tags, classes, ids](#html-tags-classes-ids)
+- [CSS](#css)
 - [Flow and block model](#flow-and-block-model)
 - [Padding and margin shortcut](#padding-and-margin-shortcut)
 - [Borders](#borders)
@@ -38,7 +39,7 @@ For the convenience of presenting long lines of text on the screen, you need to 
 #### Live server extension
 After installing <code>Live Server</code> extension press the button <code>go live</code> from the status bar to turn the server on/off. A Quick Development Live Server gives an opportunity for live browser reload. One may start or stop server by a single click from status bar.
 #### Comments in the code section
-An HTML comment begins with <code>\<! ––</code> and the comment closes with <code>––\></code> . HTML comments are visible to anyone that views the page source code, but are not rendered when the HTML document is rendered by a browser. 
+An HTML comment begins with <code>\<! ––</code> and the comment closes with <code>––\></code>. HTML comments are visible to anyone that views the page source code, but are not rendered when the HTML document is rendered by a browser. 
 
 You can also quickly comment or uncomment a line of code with the keyboard shortcut <code>Ctrl + /</code>.
 
@@ -163,6 +164,30 @@ For example, general properties can be specified by a rule on the <code>text</co
 ```
 Through a space, you can specify any number of classes.
 
+## CSS
+1. To add <code>background-color</code> property in <code>style.css</code> file, you may use shortcut <code>bgc + TAB</code> via Emmet abbreviations.
+2. To add <code>background-image</code> property in <code>style.css</code> file, you may use shortcut <code>bgi + TAB</code> via Emmet abbreviations. To upload some image on the backround you need to choose path correctly.
+   
+> The absolute path to a file is the full URL of the file.  
+> A relative file path points to a file relative to the current page.
+
+| **RELATIVE PATH** | **DESCRIPTION** |
+|:---------:|:---------:|
+| \<img src="picture.jpg"\>| picture.jpg is in the same folder as the current page| 
+| \<img src="images/picture.jpg"\>| picture.jpg is in the images folder in the current folder |
+| \<img src="/images/picture.jpg"\>| picture.jpg is located in the images folder at the root of the current website | 
+| \<img src="../picture.jpg"\>| picture.jpg is in the folder one level above the current folder | 
+
+For example:
+```bash
+   ..picture {
+        background-image: url(../img/main/html_first_site_logo_3.png);
+   }
+```
+It is recommended to use relative file paths (if possible).
+
+
+
 ## Flow and block model 
 Document flow (data flow) in HTML is the order in which elements are displayed on the page. In the usual form, all blocks are displayed in the order in which they are written inside the HTML document.
 The browser reads the file code from top to bottom and renders the page in the same way. Therefore, the elements are said to follow each other in a flow.  
@@ -222,7 +247,8 @@ Let's look at a way to automatically center an element. For the <code>display</c
 display:flex;
 ```
 ![display_flex_property.png](media/pictures/display_flex_property.png)   
-An element with this property becomes a flex container. For example, inside it <code>margin: auto</code> works not only horizontally.
+An element with this property becomes a flex container. For example, inside it <code>margin: auto</code> works not only horizontally.  
+
 ## Padding and margin shortcut
 
 <b>Margin</b> is the space around the element's border outside.  
