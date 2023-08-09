@@ -290,7 +290,7 @@ padding: 10px;
 ```
 This approach works for both margin and padding.
 
-## Borders
+## Borders  
 Element borders are located between margin and padding. In styles, borders are defined by the properties of the border group:  
 <code>border-color: #000;</code> - *цвет границы*  
 <code>border-width: 1px;</code> - *толщина границы в px*  
@@ -304,8 +304,39 @@ The box-sizing property determines the behavior of borders and padding. By defau
 By setting <code>box-sizing: border-box</code>, you change the way the element's dimensions are calculated: borders and padding are drawn inward. The total width will be equal to the <code>width</code> value. Pretty intuitive behavior, so normal practice is to set it for all elements on the page at once.
 ![box_sizing.png](media/pictures/box_sizing.png)
 
-In order not to type <code>box-sizing</code> manually for all elements, you should use the universal selector <code>\*</code>. It passes properties directly to every element on the page. Since <code>\*</code> is a very general selector, it must be specified at the very beginning of the CSS file.
-## Shadows
+In order not to type <code>box-sizing</code> manually for all elements, you should use the universal selector <code>\*</code>. It passes properties directly to every element on the page. Since <code>\*</code> is a very general selector, it must be specified at the very beginning of the CSS file.  
+## Text
+The <code>text-decoration</code> shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for text-decoration-line, text-decoration-color, text-decoration-style, and the newer text-decoration-thickness property.
+
+Examples of usage:  
+```bash
+text-decoration-line: none;  
+text-decoration: underline;  
+text-decoration: underline dotted;  
+text-decoration: green wavy underline;  
+text-decoration-line: overline solid;
+text-decoration-line: line-through dashed; 
+```
+The <code>text-align</code> CSS property sets the horizontal alignment of the inline-level content inside a block element or table-cell box. This means it works like vertical-align but in the horizontal direction.  
+
+Examples of usage:  
+```bash
+text-align: start;  
+text-align: end;  
+text-align: center;  
+text-align: justify;  
+```
+The <code>text-transform</code> CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.
+
+Examples of usage:  
+```bash
+text-transform: capitalize;       The Lord Chancellor Sitting In Lincoln's Inn Hall.
+text-transform: uppercase;        THE LORD CHANCELLOR SITTING IN LINCOLN'S INN HALL.
+text-transform: lowercase;        THE LORD CHANCELLOR SITTING IN LINCOLN'S INN HALL.
+text-transform: none;             The Lord Chancellor sitting in Lincoln's Inn Hall.
+```
+
+## Shadows  
 Shadow is a useful design tool. The <code>box-shadow</code> property is responsible for its creation.
 The property tells the browser on which side of the element the shadow should be drawn, whether to make it larger or smaller, and in what color. In code it looks like this:
 ```bash
@@ -524,5 +555,8 @@ for (let i = 0; i <= 2; i = i + 1){
 | Lists in HTML | [https://html5book.ru/html-lists/](https://html5book.ru/html-lists/) | 
 | 30 CSS selectors | [https://webdesign.tutsplus.com/ru/the-30-css-selectors-you-must-memorize--net-16048t](https://webdesign.tutsplus.com/ru/the-30-css-selectors-you-must-memorize--net-16048t) |
 | HTML Special Characters| [https://html5book.ru/specsimvoly-html/](https://html5book.ru/specsimvoly-html/) | 
+| Borders| [https://developer.mozilla.org/en-US/docs/Web/CSS/border](https://developer.mozilla.org/en-US/docs/Web/CSS/border) | 
+| Border-radius| [https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) | 
+
 
 [Back to content](#-table-of-contents)
