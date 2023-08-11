@@ -8,8 +8,10 @@ This repository was created to reflect the main points of the theory of web deve
 - [CSS](#css)
 - [Flow and block model](#flow-and-block-model)
 - [Padding and margin shortcut](#padding-and-margin-shortcut)
+- [Margin collapsing](#margin-collapsing)
 - [Borders](#borders)
 - [Shadows](#shadows)
+- [Pseudo-classes, pseudo-elements](#pseudo-classes-pseudo-elements)
 - [Introduction to JS](#introduction-to-js)
 - [Useful links](#useful-links)
 
@@ -290,6 +292,32 @@ padding: 10px;
 ```
 This approach works for both margin and padding.
 
+## Margin collapsing  
+
+The margin-top and margin-bottom are sometimes combined into one, with a size equal to the largest of them (or the size of one if they are equal). This behavior is known as <code>margin</code> collapsing.  
+
+Main rules:  
+1. For left and right margins, the collapse is __never__ applied.
+2. If both margin values are positive, then the largest value is selected from them and it is set as the distance between the blocks.
+3. With the same values of margins, one of them is taken as the distance between blocks.
+4. When using negative margins, the size of the collapsed margin is calculated as the sum of the largest positive margin and the smallest negative (largest modulo) margin.
+5. If all margins are negative, the size of the collapsed margin is equal to the smallest (greatest modulo) margin. This applies to nested elements as well as adjacent elements.
+   
+Collapse cancelling  
+
+Collapsing is not always required when laying out a page, and in some cases it even "breaks" the design. Therefore, you should know in which cases the collapse works and in which it does not.
+
+Collapse doesn't work:
+
+1. for elements that have the padding property set;
+2. for elements that have a border on the collapse side;
+3. on elements with absolute positioning, i.e. those with position set to absolute;
+4. on floating elements (for them, the float property is set to left or right);
+5. for inline or inline-block elements;
+6. for flex elements (whose parent has the display property set to flex or inline-flex);
+7. for \<html\>.
+
+
 ## Borders  
 Element borders are located between margin and padding. In styles, borders are defined by the properties of the border group:  
 <code>border-color: #000;</code> - *цвет границы*  
@@ -355,6 +383,73 @@ A sequence of values that describe the shadow:
 Sometimes the shadow doesn't need to be moved, just blurring is enough. In this case, the first two values are 0.
 
 A shadow can be created not only for the borders of an element, but also for text. In this case, the <code>text-shadow</code> property is used. It works in a similar way.
+
+## Pseudo-classes, pseudo-elements  
+
+#### Pseudo-classes
+A <code>pseudo-class</code> is a selector that selects elements that are in a specific state, such as being the first element of their type, or being hovered over with the mouse. They usually act as if you applied a class to some part of your document, which often helps reduce redundant classes in markup and results in more flexible, maintainable code.  
+
+Pseudo-classes are keywords that start with a colon.
+
+1. <code>:first-child</code>
+2. <code>:last-child</code>
+3. <code>:only-child</code>
+4. <code>:invalid</code>
+
+```bash
+:pseudo-class-name
+```
+Example:
+
+```bash
+article p:first-child {
+    font-size: 120%;
+    font-weight: bold;
+}   
+```
+#### Custom Action Pseudo-Classes  
+Some pseudo-classes only apply when the user interacts with the document in some way. These user action pseudo-classes, sometimes referred to as dynamic pseudo-classes, act as if the class were added to the element at the time the user interacts with it. 
+
+Examples:
+
+```bash
+:hover - it only applies if the user hovers over an element, usually a link.
+:focus - applies only if the user focuses on the element using keyboard control.
+```
+
+#### Pseudo-elements
+
+<code>Pseudo-elements</code> behave similarly, but they act as if you've added a whole new HTML element to your markup, rather than applying a class to existing elements. Pseudo-elements begin with a double colon <code>::</code>.
+
+```bash
+::pseudo-element-name
+```
+Examples:
+
+```bash
+::first-line - if the number of words increases or decreases, it will still only select the first row.
+```
+ #### Combining Pseudo-Classes and Pseudo-Elements
+If you want to make the first line of the first paragraph bold, you can chain the <code>:first-child</code> and <code>::first-line</code> selectors together. 
+
+```bash
+article p:first-child::first-line {
+   font-size: 120%
+   font-weight: bold;
+}
+```
+
+#### Content generation with pseudo-elements ::before and ::after
+There are a couple of special pseudo-elements that are used in conjunction with the content property to insert content into a document using CSS.   
+The correct use of these pseudo-elements is to insert an icon, such as the small arrow added in the example below, which is a visual indicator not meant to be read with Narrator (экранный диктор).
+These pseudo-elements are also often used to insert an empty string, which can then be styled just like any element on the page.
+
+```bash
+.box::after {
+    content: " ➥";
+}
+```   
+
 
 ## Introduction to JS
 #### ✔️ alert
@@ -555,8 +650,10 @@ for (let i = 0; i <= 2; i = i + 1){
 | Lists in HTML | [https://html5book.ru/html-lists/](https://html5book.ru/html-lists/) | 
 | 30 CSS selectors | [https://webdesign.tutsplus.com/ru/the-30-css-selectors-you-must-memorize--net-16048t](https://webdesign.tutsplus.com/ru/the-30-css-selectors-you-must-memorize--net-16048t) |
 | HTML Special Characters| [https://html5book.ru/specsimvoly-html/](https://html5book.ru/specsimvoly-html/) | 
-| Borders| [https://developer.mozilla.org/en-US/docs/Web/CSS/border](https://developer.mozilla.org/en-US/docs/Web/CSS/border) | 
-| Border-radius| [https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) | 
+| Borders | [https://developer.mozilla.org/en-US/docs/Web/CSS/border](https://developer.mozilla.org/en-US/docs/Web/CSS/border) | 
+| Border-radius | [https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) | 
+| Margin collapsing | [https://developer.mozilla.org/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing); [https://webref.ru/course/block-model/margin-collapse](https://webref.ru/course/block-model/margin-collapse); [https://htmlbook.ru/samlayout/blochnaya-verstka/skhlopyvayushchiesya-otstupy](https://htmlbook.ru/samlayout/blochnaya-verstka/skhlopyvayushchiesya-otstupy)| 
+| Pseudo-classes, pseudo-elements | [https://developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements](https://developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements) | 
 
 
 [Back to content](#-table-of-contents)
