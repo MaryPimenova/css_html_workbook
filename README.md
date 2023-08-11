@@ -172,7 +172,11 @@ For example, general properties can be specified by a rule on the <code>text</co
 ```
 Through a space, you can specify any number of classes.
 
-## CSS
+## CSS  
+Download and install <code>VS HTML to CSS</code> plugin. It gives an opportunity to generate CSS classes from HTML structure. 
+
+Keyboard shortcut: <code>ALT + X</code> in HTML file. Then <code>CTRL + V</code> in CSS file will generate all classes with brackets.
+
 1. To add <code>background-color</code> property in <code>style.css</code> file, you may use shortcut <code>bgc + TAB</code> via Emmet abbreviations.
 2. To add <code>background-image</code> property in <code>style.css</code> file, you may use shortcut <code>bgi + TAB</code> via Emmet abbreviations. To upload some image on the backround you need to choose path correctly.
    
