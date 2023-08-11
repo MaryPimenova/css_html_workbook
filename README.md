@@ -91,6 +91,12 @@ List elements behave like block elements, stacked one below the other and taking
 
 ### Tables
 HTML tables allow web developers to arrange data into rows and columns. You should use tags <code>\<table\></code> and <code>\</table\></code> to create a new table. 
+Emmet abbreviation for crerating tables:
+
+```bash
+table>tr*5>td*3{1} and press TAB ----> creation of the table with 5 rows and 3 columns
+```
+
 #### Table cells
 Each table cell is defined by a <code>\<td></code> and a <code>\</td></code> tag. Everything between <code>\<td></code> and <code>\</td></code> are the content of the table cell.
 #### Table rows
@@ -393,8 +399,9 @@ Pseudo-classes are keywords that start with a colon.
 
 1. <code>:first-child</code>
 2. <code>:last-child</code>
-3. <code>:only-child</code>
-4. <code>:invalid</code>
+3. <code>:nth-child</code>
+4. <code>:only-child</code>
+5. <code>:invalid</code>
 
 ```bash
 :pseudo-class-name
